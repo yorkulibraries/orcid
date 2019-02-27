@@ -10,7 +10,8 @@ class User < ApplicationRecord
     
     Rails.logger.debug "GET: #{url} token: #{self[:token]}"
     
-    Maremma.get(url, accept: 'json', bearer: self[:token])
+    response = Maremma.get(url, accept: 'json', bearer: self[:token])
+    response['body']['data']
   end
   
   def self.from_omniauth(auth)
