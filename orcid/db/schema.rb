@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_181342) do
+ActiveRecord::Schema.define(version: 2019_02_28_180739) do
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2019_02_26_181342) do
     t.string "token"
     t.string "refresh_token"
     t.integer "token_expires_at"
+    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["uid"], name: "index_users_on_uid", unique: true
   end

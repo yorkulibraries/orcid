@@ -1,9 +1,11 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Welcome</h1>
+      <h1 class="display-3">Welcome<% if user_signed_in? %>, <%= current_user.name %><% end %></h1>     
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <% if !user_signed_in? %> 
       <p><a class="btn btn-secondary btn-md" href="<%= orcid_authorize_url %>" role="button"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width="16" height="16" alt="ORCID iD icon"> Register or Connect your ORCID iD</a></p>
+      <% end %>
     </div>
   </div>
   

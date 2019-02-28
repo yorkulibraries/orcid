@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pundit
+  
   before_action :generate_omniauth_state
   
   def generate_omniauth_state

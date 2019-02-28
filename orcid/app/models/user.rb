@@ -3,7 +3,15 @@ class User < ApplicationRecord
   
   devise :omniauthable, :omniauth_providers => [:orcid]
   
+  enum role: [:user, :admin]
+  
+  after_initialize :set_default_role, :if => :new_record?
+  
   API_VERSION = '2.0'
+  
+  def set_default_role
+    self.role ||= :user
+  end
   
   def get_orcid_record()
     url = User.orcid_api_base_url + "/#{self[:uid]}/record"
@@ -19,6 +27,10 @@ class User < ApplicationRecord
       user.token = auth.credentials.token
       user.refresh_token = auth.credentials.refresh_token
       user.token_expires_at = auth.credentials.expires_at
+      user.email = auth.info.email
+      user.name = auth.info.name
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
     end
   end
   
