@@ -2,8 +2,8 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">Welcome<% if user_signed_in? %>, <%= current_user.name %><% end %></h1>     
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <% if !user_signed_in? %> 
+      <p>Create an ORCID iD to obtain a unique and open digital identifier that can distinguish you from other researchers and help increase your visibility.</p>
+      <% if true || !user_signed_in? %> 
       <p><a class="btn btn-secondary btn-md" href="<%= orcid_authorize_url %>" role="button"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width="16" height="16" alt="ORCID iD icon"> Register or Connect your ORCID iD</a></p>
       <% end %>
     </div>
@@ -13,18 +13,26 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2>What is an ORCID iD?</h2>
+        <p>An ORCID iD is a persistent digital identifier that distinguishes you from other researchers and a record that supports automatic links among all your professional activities. Your ORCID iD and connections are stored in the ORCID Registry, in an account you own and manage.</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2>Why register for an ORCID iD?</h2>
+        <p>An ORCID iD: 
+          <ul>
+            <li>ensures your research outputs and activities are correctly attributed to you</li>
+            <li>connects you with your contributions and affiliations</li>
+            <li>improves discoverability for you and your research outputs</li>
+            <li>reduces form-filling</li>
+            <li>is interoperable (works with many funders and publishers)</li>
+          </ul>
+        </p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <h2>Can I manage my ORCID record?</h2>
+        <p>You control your ORCID record, including what information is connected to your iD; what is publicly available, private, or shared with trusted third parties; and which third parties you share information with.</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
     </div>
