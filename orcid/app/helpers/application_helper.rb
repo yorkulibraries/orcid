@@ -14,4 +14,8 @@ module ApplicationHelper
     base_url + "/#{uid}"
   end
   
+  def thank_you_page
+    ENV['THANK_YOU_PAGE']
+  end
+  
 end
