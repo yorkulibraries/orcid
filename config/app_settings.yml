@@ -1,0 +1,10 @@
+development:
+  mail:
+    from_name: "orcid"
+    from_email: "noreply@orcid"
+
+production:
+  mail:
+    from_name: "orcid"
+    from_email: "noreply@orcid"
+
