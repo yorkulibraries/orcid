@@ -62,7 +62,7 @@
           <tbody>
             <% @users.each do |user| %>
             <tr>
-              <td><a target="_blank" href="<%= orcid_id_full(user.uid) %>"><%= orcid_id_full(user.uid) %><</a>/td>
+              <td><a target="_blank" href="<%= orcid_id_full(user.uid) %>"><%= orcid_id_full(user.uid) %><</a></td>
               <td><%= format_date_authorized(user.created_at) %></td>
               <td><%= format_orcid_token_expiry(user.token_expires_at) %></td>
             </tr>
