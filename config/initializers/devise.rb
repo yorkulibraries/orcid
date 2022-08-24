@@ -262,8 +262,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :orcid, ENV['ORCID_CLIENT_ID'],
                         ENV['ORCID_CLIENT_SECRET'],
-                        member: ENV['ORCID_MEMBER'],
-                        sandbox: ENV['ORCID_SANDBOX']
+                        member: ENV['ORCID_MEMBER'] == 'true',
+                        sandbox: ENV['ORCID_SANDBOX'] == 'true'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
