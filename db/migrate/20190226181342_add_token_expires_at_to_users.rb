@@ -1,5 +1,5 @@
 class AddTokenExpiresAtToUsers < ActiveRecord::Migration[5.2]
   def change
-    add_column :users, :token_expires_at, :integer
+    add_column :users, :token_expires_at, :bigint
   end
 end
